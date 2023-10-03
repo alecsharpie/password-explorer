@@ -8,7 +8,7 @@ const CharacterTypeDistribution = ({ data, charType }) => {
   const count = data.filter((password) =>
     password.contains.includes(charType)
   ).length;
-  const percentage = (count / data.length) * 100;
+  const percentage = Math.round((count / data.length) * 100);
 
   const options = {
     chart: {
@@ -18,7 +18,7 @@ const CharacterTypeDistribution = ({ data, charType }) => {
       type: "pie",
     },
     title: {
-      text: `Distribution of Passwords Containing ${
+      text: `Percent of Passwords Containing ${
         charType.charAt(0).toUpperCase() + charType.slice(1)
       } Characters`,
     },
@@ -35,12 +35,29 @@ const CharacterTypeDistribution = ({ data, charType }) => {
             selected: true,
           },
           {
-            name: "Others",
+            name: `Non-${
+              charType.charAt(0).toUpperCase() + charType.slice(1)
+            } Characters`,
             y: 100 - percentage,
           },
         ],
+        dataLabels: {
+          formatter: function () {
+            if (this.y > 0) {
+              return (
+                this.point.name +
+                ": " +
+                Highcharts.numberFormat(this.point.percentage, 0) +
+                " %"
+              );
+            }
+          },
+        },
       },
     ],
+    legend: {
+      enabled: true,
+    },
   };
 
   return <HighchartsReact highcharts={Highcharts} options={options} />;

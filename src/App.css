@@ -1,7 +1,3 @@
-/* .App {
-    text-align: center;
-} */
-
 .App {
     text-align: left;
     background-color: #f0f0f0;
@@ -22,21 +18,9 @@
 
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
-        animation: App-logo-spin infinite 20s linear;
+        animation: App-logo-spin infinite 120s linear;
     }
 }
-
-
-/* .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-} */
 
 .App-header {
     background-color: #282c34;
@@ -62,15 +46,6 @@
     }
 }
 
-
-/* src/App.css */
-
-
-/* src/App.css */
-
-
-/* Reset some default styling in browsers */
-
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -78,11 +53,34 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.chart-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
 
-/* Container for the whole app */
+.chart-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+}
 
-
-/* Header styling */
+.data-container-title {
+    font-size: 2em;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    /* Makes the text bold */
+    margin-bottom: 20px;
+    /* Adds some space below the title */
+    text-align: center;
+    /* Centers the title */
+    color: #333;
+    /* Sets the text color; adjust as needed */
+}
 
 
 /* For the content within each component */

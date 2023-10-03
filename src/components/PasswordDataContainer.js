@@ -16,8 +16,34 @@ const PasswordDataContainer = () => {
       .then((response) => response.text())
       .then((data) => {
         const passwords = data.split("\n");
+        const passwordStrengthConfig = [
+          {
+            id: 0,
+            value: "Too weak",
+            minDiversity: 0,
+            minLength: 0,
+          },
+          {
+            id: 1,
+            value: "Weak",
+            minDiversity: 2,
+            minLength: 6,
+          },
+          {
+            id: 2,
+            value: "Medium",
+            minDiversity: 4,
+            minLength: 8,
+          },
+          {
+            id: 3,
+            value: "Strong",
+            minDiversity: 4,
+            minLength: 12,
+          },
+        ];
         const processedData = passwords.map((password) =>
-          passwordStrength(password)
+          passwordStrength(password, passwordStrengthConfig)
         );
         setPasswordData(processedData);
       });
@@ -25,12 +51,27 @@ const PasswordDataContainer = () => {
 
   return (
     <div>
-      <PasswordLengthDistribution data={passwordData} />
-      <CharacterDiversityDistribution data={passwordData} />
-      <CharacterTypeDistribution data={passwordData} charType="lowercase" />
-      <CharacterTypeDistribution data={passwordData} charType="uppercase" />
-      <CharacterTypeDistribution data={passwordData} charType="number" />
-      <CharacterTypeDistribution data={passwordData} charType="symbol" />
+      <div className="chart-grid">
+        <div className="chart-container">
+          <PasswordLengthDistribution data={passwordData} />
+        </div>
+        <div className="chart-container">
+          <CharacterDiversityDistribution data={passwordData} />
+        </div>
+        <div className="chart-container">
+          <CharacterTypeDistribution data={passwordData} charType="lowercase" />
+        </div>
+        <div className="chart-container">
+          <CharacterTypeDistribution data={passwordData} charType="uppercase" />
+        </div>
+        <div className="chart-container">
+          <CharacterTypeDistribution data={passwordData} charType="number" />
+        </div>
+        <div className="chart-container">
+          <CharacterTypeDistribution data={passwordData} charType="symbol" />
+        </div>
+        {/* ... Other chart components go here, each wrapped in a div with class chart-container ... */}
+      </div>
     </div>
   );
 };
