@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/password-explorer/static/css/main.14a69577.css",
-    "main.js": "/password-explorer/static/js/main.91d22ffa.js",
+    "main.css": "/password-explorer/static/css/main.a84f8d92.css",
+    "main.js": "/password-explorer/static/js/main.98a87edd.js",
     "static/js/787.21497ce9.chunk.js": "/password-explorer/static/js/787.21497ce9.chunk.js",
-    "static/media/logo.svg": "/password-explorer/static/media/logo.e619daa97291598bca681503eecc6d51.svg",
+    "static/media/logo.svg": "/password-explorer/static/media/logo.b15d793c5eb51163c759238e9f77bd5a.svg",
     "index.html": "/password-explorer/index.html",
-    "main.14a69577.css.map": "/password-explorer/static/css/main.14a69577.css.map",
-    "main.91d22ffa.js.map": "/password-explorer/static/js/main.91d22ffa.js.map",
+    "main.a84f8d92.css.map": "/password-explorer/static/css/main.a84f8d92.css.map",
+    "main.98a87edd.js.map": "/password-explorer/static/js/main.98a87edd.js.map",
     "787.21497ce9.chunk.js.map": "/password-explorer/static/js/787.21497ce9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.14a69577.css",
-    "static/js/main.91d22ffa.js"
+    "static/css/main.a84f8d92.css",
+    "static/js/main.98a87edd.js"
   ]
 }
