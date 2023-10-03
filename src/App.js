@@ -4,6 +4,7 @@ import "./App.css";
 // src/App.js
 import React from "react";
 import AppNavigation from "./components/AppNavigation";
+import PasswordDataContainer from "./components/PasswordDataContainer";
 import EthicalGuidelines from "./components/EthicalGuidelines";
 import PasswordRecommendations from "./components/PasswordRecomendations";
 import PasswordManagerExplanation from "./components/PasswordManagerExplanation";
@@ -17,6 +18,7 @@ function App() {
         <p>Password Security</p>
       </header>
       <AppNavigation />
+      <PasswordDataContainer />
       <PasswordRecommendations />
       <PasswordManagerExplanation />
       <TwoFactorAuthEducation />

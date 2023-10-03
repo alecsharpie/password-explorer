@@ -8,7 +8,7 @@ const PasswordManagerExplanation = () => {
       <p>
         {" "}
         A Password Manager is a tool that stores and manages your passwords in a
-        secure vault.It generates, retrieves, and keeps track of complex
+        secure vault. It generates, retrieves, and keeps track of complex
         passwords for multiple accounts, allowing you to use strong, unique
         passwords without needing to remember them all.{" "}
       </p>{" "}
