@@ -14,7 +14,7 @@ const PasswordLengthDistribution = ({ data }) => {
   // Convert the object to an array of arrays for Highcharts
   const chartData = Object.entries(passwordLengths).map(([length, count]) => [
     parseInt(length),
-    count,
+    Math.round(count / data.length * 100, 2),
   ]);
 
   const options = {

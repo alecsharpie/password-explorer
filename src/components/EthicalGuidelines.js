@@ -4,7 +4,9 @@ import React from "react";
 const EthicalGuidelines = () => {
   return (
     <div className="component-content">
-      <h2>Ethical Guidelines</h2>
+      <section id="ethicalGuidelines">
+        <h2>Ethical Guidelines</h2>
+      </section>
       <p>
         This tool is designed strictly for educational purposes to promote
         better password security practices. It is not intended for hacking,

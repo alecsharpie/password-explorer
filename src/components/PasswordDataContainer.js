@@ -11,7 +11,7 @@ const PasswordDataContainer = () => {
 
   useEffect(() => {
     fetch(
-      "https://raw.githubusercontent.com/alecsharpie/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-100.txt"
+      "https://raw.githubusercontent.com/alecsharpie/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-100000.txt"
     )
       .then((response) => response.text())
       .then((data) => {

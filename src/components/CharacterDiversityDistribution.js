@@ -13,7 +13,10 @@ const CharacterDiversityDistribution = ({ data }) => {
 
   // Convert the object to an array of arrays for Highcharts
   const chartData = Object.entries(diversityCounts).map(
-    ([diversity, count]) => [parseInt(diversity), count]
+    ([diversity, count]) => [
+      parseInt(diversity),
+      Math.round((count / data.length) * 100, 2),
+    ]
   );
 
   const options = {
@@ -27,7 +30,8 @@ const CharacterDiversityDistribution = ({ data }) => {
       title: {
         text: "Number of Different Character Types: lowercase, uppercase, symbol, & number",
       },
-      categories: ["1 Type", "2 Types", "3 Types", "4 Types"], // Representing the four types of characters
+      categories: ["1 Type", "2 Types", "3 Types", "4 Types"],
+      max: 3
     },
     yAxis: {
       title: {
@@ -40,6 +44,7 @@ const CharacterDiversityDistribution = ({ data }) => {
         name: "Passwords",
         data: chartData,
         showInLegend: false, // Since there is only one series, no need for legend
+
       },
     ],
   };

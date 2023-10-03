@@ -4,7 +4,9 @@ import React from "react";
 const TwoFactorAuthEducation = () => {
   return (
     <div className="component-content">
-      <h2>Two-Factor Authentication (2FA) Education</h2>
+      <section id="twoFactorAuthEducation">
+        <h2>Two-Factor Authentication (2FA) Education</h2>
+      </section>
       <p>
         2FA adds an extra layer of security to your accounts by requiring two
         forms of identification before granting access. Typically, this involves

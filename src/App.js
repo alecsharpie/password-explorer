@@ -4,12 +4,13 @@ import "./App.css";
 // src/App.js
 import React from "react";
 import AppNavigation from "./components/AppNavigation";
+import SafetyInfo from "./components/SafetyInfo.js";
 import PasswordDataContainer from "./components/PasswordDataContainer";
 import EthicalGuidelines from "./components/EthicalGuidelines";
 import PasswordRecommendations from "./components/PasswordRecomendations";
 import PasswordManagerExplanation from "./components/PasswordManagerExplanation";
 import TwoFactorAuthEducation from "./components/TwoFactorAuthEducation";
-import PasswordStrengthChecker from "./components/PasswordStrengthChecker";
+import PasswordStrengthCheck from "./components/PasswordStrengthCheck";
 import PasswordDataAnalysis from "./components/PasswordDataAnalysis";
 import PasswordExample from "./components/PasswordExample";
 
@@ -21,7 +22,8 @@ function App() {
         <p>Password Security</p>
       </header>
       <AppNavigation />
-      <PasswordStrengthChecker />
+      <SafetyInfo />
+      <PasswordStrengthCheck />
       <PasswordDataAnalysis />
       <PasswordDataContainer />
       <PasswordExample />

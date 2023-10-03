@@ -1,10 +1,10 @@
-// src/components/PasswordStrengthChecker.js
+// src/components/PasswordStrengthCheck.js
 import React, { useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { passwordStrength } from "check-password-strength";
-import "./PasswordStrengthChecker.css";
+import "./PasswordStrengthCheck.css";
 
-const PasswordStrengthChecker = () => {
+const PasswordStrengthCheck = () => {
   const [password, setPassword] = useState("");
   const [strengthData, setStrengthData] = useState(null);
 
@@ -69,7 +69,9 @@ const PasswordStrengthChecker = () => {
 
   return (
     <div className="component-content">
-      <h2>Password Strength Checker</h2>
+      <section id="passwordStrengthCheck">
+        <h2>Strength Check</h2>
+      </section>
       <div className="strength-checker">
         <label>
           Enter Password:{" "}
@@ -153,4 +155,4 @@ const PasswordStrengthChecker = () => {
   );
 };
 
-export default PasswordStrengthChecker;
+export default PasswordStrengthCheck;

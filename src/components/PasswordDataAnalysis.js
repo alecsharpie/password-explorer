@@ -5,9 +5,11 @@ const PasswordDataAnalysis = () => {
   return (
     <div className="component-content">
       <div>
-        <h2>Common Password Analysis</h2>
+        <section id="passwordDataAnalysis">
+          <h2>Common Password Analysis</h2>
+        </section>
         <p>
-          Using a "common password" list we can visualise the security of what
+          Using a common password list we can explore the "security" of what
           many people consider a safe passwords.
         </p>
         <p>

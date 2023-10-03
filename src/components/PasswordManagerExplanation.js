@@ -4,7 +4,9 @@ import React from "react";
 const PasswordManagerExplanation = () => {
   return (
     <div className="component-content">
-      <h2> What is a Password Manager ? </h2>{" "}
+      <section id="passwordManagerExplanation">
+        <h2> What is a Password Manager ? </h2>{" "}
+      </section>
       <p>
         {" "}
         A Password Manager is a tool that stores and manages your passwords in a

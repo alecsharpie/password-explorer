@@ -36,11 +36,14 @@ const PasswordExample = () => {
   }, [passwords]);
 
   return (
-      <div className="component-content">
+    <div className="component-content">
+      <section id="passwordExample">
         <h2>Example Passwords</h2>
-        <i>(50 randomly chosen from the same SecLists project)</i>
-        <p>{samplePasswords.join(",  ")}</p>
-      </div>
+      </section>
+      <i>(50 randomly chosen from the same SecLists project)</i>
+      <p>⚠️⚠️⚠️ Uncensored ⚠️⚠️⚠️</p>
+      <p>{samplePasswords.join(",  ")}</p>
+    </div>
   );
 };
 
